@@ -3,10 +3,8 @@ import logo from './logo.svg';
 import './App.css';
 import Welcome from './doodle/Welcome'
 
-function App() {
-  
-  return (
-    
+const App:React.FunctionComponent = ()=> {  
+  return (    
     <div className="App">
       <header className="App-header">
         <Welcome name="Wei" />

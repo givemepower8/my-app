@@ -2,6 +2,8 @@ interface WelcomeProps {
     name: string; 
 }
 
-export default function Welcome(props:WelcomeProps) {
+const Welcome = (props:WelcomeProps) => {
     return <h1>Hello, {props.name}</h1>;
 }
+
+export default Welcome;
