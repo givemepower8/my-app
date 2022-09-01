@@ -2,12 +2,14 @@ import React from 'react';
 import logo from './logo.svg';
 import './App.css';
 import Welcome from './doodle/Welcome'
+import AxiosTest from './doodle/TodoItemList'
 
 const App:React.FunctionComponent = ()=> {  
   return (    
     <div className="App">
       <header className="App-header">
         <Welcome name="Wei" />
+        <AxiosTest />
         <img src={logo} className="App-logo" alt="logo" />
         <p>
           Edit <code>src/App.tsx</code> and save to reload.
