@@ -2,14 +2,14 @@ import React from 'react';
 import logo from './logo.svg';
 import './App.css';
 import Welcome from './doodle/Welcome'
-import TodoItemList from './doodle/TodoItemList'
+import TodoItemApp from './doodle/TodoItemApp'
 
 const App:React.FunctionComponent = ()=> {  
   return (    
     <div className="App">
       <header className="App-header">
         <Welcome name="Wei" />
-        <TodoItemList />
+        <TodoItemApp />
         <img src={logo} className="App-logo" alt="logo" />
         <p>
           Edit <code>src/App.tsx</code> and save to reload.
