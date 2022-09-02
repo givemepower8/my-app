@@ -1,5 +1,5 @@
  import axios from "axios";
- import { useEffect , useState, Fragment } from 'react';
+ import { useEffect , useState } from 'react';
 
  interface TodoItem {
     id?: number;
@@ -13,7 +13,6 @@ interface TodoListProps {
 
 const TodoList: React.FC<TodoListProps> = (props) => {
     return (
-        <Fragment>
             <ul>
             {props.items?.map(item => (
                 <li key={item.id}>
@@ -22,11 +21,10 @@ const TodoList: React.FC<TodoListProps> = (props) => {
                 </li>
             ))}
             </ul>
-        </Fragment>
     );
 };
 
-const AxiosTest = () => {
+const TodoItemsApp = () => {
 
     const [todoItems, setTodoItems] = useState<TodoItem[]>();
            
@@ -48,4 +46,4 @@ const AxiosTest = () => {
     return <TodoList items={todoItems} />;
 }
 
-export default AxiosTest;
+export default TodoItemsApp;
