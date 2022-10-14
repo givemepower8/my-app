@@ -31,7 +31,8 @@ const TodoItemsApp = () => {
     useEffect(() => {
         async function getTotoItems() {
             try {
-                const resp = await axios.get<TodoItem[]>('https://localhost:5001/api/todoitems');
+                const resp = await axios.get<TodoItem[]>('http://localhost:5000/api/todoitems');
+                //const resp = await axios.get<TodoItem[]>('https://localhost:5001/api/todoitems');
                 setTodoItems(resp.data);
             } catch (err) {
                 console.error(err);
