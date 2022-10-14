@@ -41,5 +41,9 @@
       "last 1 firefox version",
       "last 1 safari version"
     ]
-  }
+  },
+  "main": "index.js",
+  "repository": "https://github.com/givemepower8/my-app.git",
+  "author": "givemepower8 <givemepower8@gmail.com>",
+  "license": "MIT"
 }
