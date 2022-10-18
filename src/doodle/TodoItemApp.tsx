@@ -3,26 +3,13 @@
 
  interface TodoItem {
     id?: number;
-    name: string;
-    isComplete: boolean;
+    todo: string;
+    completed: boolean;
 }
 
 interface TodoListProps {
-    items?: TodoItem[] ;
+    todos?: TodoItem[] ;
 }
-
-const TodoList: React.FC<TodoListProps> = (props) => {
-    return (
-            <ul>
-            {props.items?.map(item => (
-                <li key={item.id}>
-                    <span>{item.name}</span>
-                    <input type="checkbox" name="IsComplete" checked={item.isComplete} readOnly/>
-                </li>
-            ))}
-            </ul>
-    );
-};
 
 const TodoItemsApp = () => {
 
@@ -31,9 +18,11 @@ const TodoItemsApp = () => {
     useEffect(() => {
         async function getTotoItems() {
             try {
-                const resp = await axios.get<TodoItem[]>('http://localhost:5000/api/todoitems');
+                const resp = await axios.get('https://dummyjson.com/todos');
+                //console.log(resp);
+                let todos = resp.data.todos;
                 //const resp = await axios.get<TodoItem[]>('https://localhost:5001/api/todoitems');
-                setTodoItems(resp.data);
+                setTodoItems(todos);
             } catch (err) {
                 console.error(err);
             } finally {
@@ -44,7 +33,26 @@ const TodoItemsApp = () => {
         getTotoItems();
     }, []);
     
-    return <TodoList items={todoItems} />;
+    return <TodoList todos={todoItems} />;
 }
+
+const TodoList: React.FC<TodoListProps> = (props) => {
+
+    const handleChange = () => { 
+    
+               
+      }; 
+
+    return (
+            <ul>
+            {props.todos?.map(item => (
+                <li key={item.id}>
+                     <label>Complete <input type="checkbox" name="IsComplete" checked={item.completed}/></label>     
+                    <span> {item.todo}</span>                                   
+                </li>
+            ))}
+            </ul>
+    );
+};
 
 export default TodoItemsApp;
