@@ -4,6 +4,18 @@ This project was bootstrapped with [Create React App](https://github.com/faceboo
 
 `npx create-react-app my-app --template typescript`
 
+## road map
+
+This project is a side-project to practice front-end web development in React, redux and ecosystems.
+
++ use router to load different demos
++ use storybook for UI
++ state management
+  + prop drilling up
+  + prop drilling down
+  + context
+  + redux
+
 ## Available Scripts
 
 In the project directory, you can run:
@@ -23,6 +35,17 @@ See the section about [running tests](https://facebook.github.io/create-react-ap
 
 To upgrade the packages
 `yarn upgrade`
+
+### storybook
+
+```text
+# Add Storybook:
+npx storybook init
+
+```
+
+To run the storybook
+`yarn storybook`
 
 ### `npm run build`
 
