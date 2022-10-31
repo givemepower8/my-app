@@ -38,11 +38,6 @@ const TodoItemsApp = () => {
 
 const TodoList: React.FC<TodoListProps> = (props) => {
 
-    const handleChange = () => { 
-    
-               
-      }; 
-
     return (
             <ul>
             {props.todos?.map(item => (
