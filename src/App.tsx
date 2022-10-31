@@ -1,8 +1,8 @@
 import React from 'react';
 import logo from './logo.svg';
 import './App.css';
-import Welcome from './doodle/Welcome'
-import TodoItemApp from './doodle/TodoItemApp'
+import Welcome from './playground/Welcome'
+import TodoItemApp from './playground/TodoItemApp'
 
 const App:React.FunctionComponent = ()=> {  
   return (    
