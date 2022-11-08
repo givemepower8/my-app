@@ -5,12 +5,13 @@ interface ButtonProps {
   disabled?: boolean;
   size?: 'small' | 'medium' | 'large';
   variant?: 'text' | 'contained' | 'outlined';
+  color?: 'primary' | 'secondary' | 'success' | 'error';
   label: string;
   
   onClick?: () => void;
 }
 
-export const MyButton = ({
+export const MuiButton = ({
   disabled = false,
   size = 'medium',
   variant = 'text',
