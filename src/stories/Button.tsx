@@ -10,9 +10,6 @@ interface ButtonProps {
   onClick?: () => void;
 }
 
-/**
- * Primary UI component for user interaction
- */
 export const MyButton = ({
   disabled = false,
   size = 'medium',
