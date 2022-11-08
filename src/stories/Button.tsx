@@ -1,48 +1,32 @@
-import React from 'react';
-import './button.css';
+import Button from '@mui/material/Button';
 
-interface ButtonProps {
-  /**
-   * Is this the principal call to action on the page?
-   */
-  primary?: boolean;
-  /**
-   * What background color to use
-   */
-  backgroundColor?: string;
-  /**
-   * How large should the button be?
-   */
+// https://mui.com/material-ui/api/button/
+interface ButtonProps { 
+  disabled?: boolean;
   size?: 'small' | 'medium' | 'large';
-  /**
-   * Button contents
-   */
+  variant?: 'text' | 'contained' | 'outlined';
   label: string;
-  /**
-   * Optional click handler
-   */
+  
   onClick?: () => void;
 }
 
 /**
  * Primary UI component for user interaction
  */
-export const Button = ({
-  primary = false,
+export const MyButton = ({
+  disabled = false,
   size = 'medium',
-  backgroundColor,
+  variant = 'text',
   label,
   ...props
 }: ButtonProps) => {
-  const mode = primary ? 'storybook-button--primary' : 'storybook-button--secondary';
   return (
-    <button
-      type="button"
-      className={['storybook-button', `storybook-button--${size}`, mode].join(' ')}
-      style={{ backgroundColor }}
-      {...props}
-    >
+    <Button
+      disabled={disabled}
+      variant = {variant}
+      size = {size}
+      {...props}>
       {label}
-    </button>
+    </Button>
   );
 };
