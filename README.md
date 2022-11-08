@@ -47,6 +47,8 @@ npx storybook init
 To run the storybook
 `yarn storybook`
 
+`yarn add @mui/material @emotion/react @emotion/styled`
+
 ### `npm run build`
 
 Builds the app for production to the `build` folder.\
