@@ -1,20 +1,20 @@
 import React from 'react';
 import { ComponentStory, ComponentMeta } from '@storybook/react';
 
-import { MyButton } from './Button';
+import { MuiButton } from './Button';
 
 // More on default export: https://storybook.js.org/docs/react/writing-stories/introduction#default-export
 export default {
-  title: 'Example/Button',
-  component: MyButton,
+  title: 'MyApp/Button',
+  component: MuiButton,
   // More on argTypes: https://storybook.js.org/docs/react/api/argtypes
   argTypes: {
    
   },
-} as ComponentMeta<typeof MyButton>;
+} as ComponentMeta<typeof MuiButton>;
 
 // More on component templates: https://storybook.js.org/docs/react/writing-stories/introduction#using-args
-const Template: ComponentStory<typeof MyButton> = (args) => <MyButton {...args} />;
+const Template: ComponentStory<typeof MuiButton> = (args) => <MuiButton {...args} />;
 
 export const Default = Template.bind({});
 // More on args: https://storybook.js.org/docs/react/writing-stories/args
