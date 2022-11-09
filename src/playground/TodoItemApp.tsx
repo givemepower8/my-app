@@ -20,7 +20,7 @@ const TodoItemsApp = () => {
             try {
                 const resp = await axios.get('https://dummyjson.com/todos');
                 //console.log(resp);
-                let todos = resp.data.todos;
+                let todos : TodoItem[] = resp.data.todos;
                 //const resp = await axios.get<TodoItem[]>('https://localhost:5001/api/todoitems');
                 setTodoItems(todos);
             } catch (err) {
