@@ -11,8 +11,7 @@ This project is a side-project to practice front-end web development in React, r
 + use router to load different demos
 + use storybook for UI
 + state management
-  + prop drilling up
-  + prop drilling down
+  + prop drilling
   + context
   + redux
 
